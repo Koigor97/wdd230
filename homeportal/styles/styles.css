@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap");
+:root {
+  --bg-color: #cecaae;
+  --header-color: #292425;
+  --paragraph-color: #292425c6;
+
+  --header-font: "Montserrat";
+  --paragraph-font: "Poppins";
+
+  --text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.798);
+  --image-shadow: 3px 3px 2rem #000;
+  --shadow-box: 8px 3px 4rem rgba(0, 0, 0, 0.734);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--paragraph-color);
+  font-family: var(--paragraph-font);
+  font-size: 1.8rem;
+  line-height: 1.5;
+  max-width: 80vw;
+  margin: 3rem auto;
+}
+
+header {
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  text-shadow: var(--text-shadow);
+}
+
+header,
+h2 {
+  color: var(--header-color);
+  font-family: var(--header-font);
+  font-size: 2.5rem;
+}
+
+h2 {
+  padding: 0 1rem;
+  text-shadow: var(--text-shadow);
+}
+
+img {
+  width: 30%;
+  box-shadow: var(--image-shadow);
+}
+
+ul {
+  padding: 2rem 3.5rem;
+}
+
+footer {
+  background-color: var(--bg-color);
+  text-align: center;
+  padding: 2rem 4rem;
+  margin-top: 3rem;
+}
+
+header,
+img,
+footer {
+  border-radius: 1.5rem;
+}
+
+header,
+footer {
+  box-shadow: var(--shadow-box);
+}
+
+.update-date {
+  color: #5c3024;
+  font-size: 1.6rem;
+}
