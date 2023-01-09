@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap");
 :root {
   --bg-color: #cecaae;
   --header-color: #292425;
   --paragraph-color: #292425c6;
 
-  --header-font: "Montserrat";
-  --paragraph-font: "Poppins";
+  --header-font: "Montserrat", sans-serif;
+  --paragraph-font: "Poppins", sans-serif;
 
   --text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.798);
   --image-shadow: 3px 3px 2rem #000;
