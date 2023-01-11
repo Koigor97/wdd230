@@ -1,0 +1,37 @@
+@media only screen and (min-width: 32.5em) {
+  body {
+    max-width: 80vw;
+    margin: 3rem auto;
+    font-size: 1.8rem;
+  }
+
+  header {
+    flex-direction: row;
+  }
+
+  header,
+  h2 {
+    font-size: 2.5rem;
+    text-shadow: var(--text-shadow);
+  }
+
+  img {
+    width: 30%;
+    box-shadow: var(--image-shadow);
+  }
+
+  header,
+  img,
+  footer {
+    border-radius: 1.5rem;
+  }
+
+  header,
+  footer {
+    box-shadow: var(--shadow-box);
+  }
+
+  .update-date {
+    font-size: 1.6rem;
+  }
+}
