@@ -1,0 +1,25 @@
+@media only screen and (min-width: 37.5em) {
+  html {
+    font-size: 62.5%;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header {
+    font-size: 2rem;
+  }
+
+  body {
+    padding: 3.5rem;
+  }
+
+  footer {
+    padding: 1rem 0;
+  }
+
+  .sec3 {
+    grid-column: span 2;
+  }
+}

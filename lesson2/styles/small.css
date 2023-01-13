@@ -1,0 +1,87 @@
+:root {
+  --heading-font: "Roboto Mono", monospace;
+  --body-font: "Lato", sans-serif;
+
+  --heading-bg: #1a130f;
+  --paragraph-bg: #fff5f0;
+  --paragraph-color: #311922;
+  --header-footer-bg: #5c2025;
+}
+
+html {
+  font-size: 50%;
+}
+
+body {
+  font-size: 1.7rem;
+  font-family: var(--body-font);
+  color: var(--paragraph-color);
+  padding: 0 1.5rem;
+  line-height: 1.5;
+}
+
+header {
+  background-color: var(--header-footer-bg);
+  color: #fff;
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 5px 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-top: -2rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 2.5rem;
+}
+
+.web-img {
+  width: 100%;
+  height: auto;
+}
+
+.caption-title {
+  background-color: var(--heading-bg);
+  color: #fff;
+  display: block;
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  font-weight: 600;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+section {
+  background-color: var(--paragraph-bg);
+}
+
+a {
+  display: block;
+  margin-top: -2rem;
+  padding: 0.5rem 1.5rem 1rem;
+}
+
+.caption-title,
+.web-name,
+.img-box,
+.description {
+  padding: 0.5rem 1.5rem;
+}
+
+.img-box {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+footer {
+  background-color: var(--header-footer-bg);
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}

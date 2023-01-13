@@ -1,0 +1,16 @@
+@media only screen and (min-width: 56.2em) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sec3 {
+    grid-column: 3 / 4;
+  }
+}
+
+@media only screen and (min-width: 97.5em) {
+  body {
+    width: 69vw;
+    margin: 0 auto;
+  }
+}
