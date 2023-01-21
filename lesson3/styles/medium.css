@@ -5,6 +5,7 @@
 
   body {
     font-size: 1.7rem;
+    height: 100vh;
   }
 
   nav {
@@ -16,6 +17,7 @@
   .nav-links:visited {
     font-size: 1.6rem;
     font-weight: 400;
+    margin-block-end: 0;
   }
 
   .nav-links:is(:hover) {

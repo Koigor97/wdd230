@@ -53,6 +53,7 @@ nav {
   font-weight: 600;
   cursor: pointer;
   font-size: 2rem;
+  margin-block-end: 2rem;
 }
 
 .nav-links:is(:hover) {
