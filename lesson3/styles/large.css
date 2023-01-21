@@ -1,0 +1,44 @@
+@media only screen and (min-width: 56.2em) {
+  .grid-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  body {
+    max-width: 80vw;
+    margin: 7rem auto;
+  }
+
+  .nav-links:link,
+  .nav-links:visited {
+    font-size: 1.7rem;
+  }
+
+  .summary-box,
+  #target-audience {
+    width: 80ch;
+    margin: 0 auto;
+  }
+
+  .grid-box :nth-child(7) {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+}
+
+@media only screen and (min-width: 97.5em) {
+  body {
+    width: 69vw;
+    margin: 0 auto;
+    margin-block-start: 5rem;
+    font-size: 2rem;
+  }
+
+  .nav-links:link,
+  .nav-links:visited {
+    font-size: 1.9rem;
+  }
+
+  .logo {
+    width: 20%;
+  }
+}

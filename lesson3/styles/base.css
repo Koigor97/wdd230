@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --heading-font: "DM Sans", sans-serif;
+  --paragraph-font: "Lato", sans-serif;
+  --nav-button-font: "Nunito Sans", sans-serif;
+
+  --color-primary: #121ca5;
+  --color-secondary: #ffbe37;
+  --color-nav-foot: #edeefd;
+
+  --primary-text1: #212427;
+  --primary-text2: #fff;
+  --secondary-text: #313131;
+}
+
+html {
+  font-size: 50%;
+}
+
+/* This are the overall  page layout for all the 
+three linked pages*/
+body {
+  color: var(--secondary-text);
+  font-family: var(--paragraph-font);
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+header {
+  padding: 2rem;
+  background-color: var(--color-nav-foot);
+  font-family: var(--nav-button-font);
+  margin-block-end: 2.5rem;
+}
+
+nav {
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+
+.nav-links:link,
+.nav-links:visited {
+  color: var(--secondary-text);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.nav-links:is(:hover) {
+  background-color: var(--color-secondary);
+}
+
+.main,
+#target-audience,
+.grid-box {
+  padding-inline: 1.5rem;
+}
+/* The Site-purpose CSS section*/
+[class*="grid-"] {
+  display: grid;
+  gap: 3rem;
+}
+
+.title-box,
+.title-box > h2 {
+  margin-block-end: 2rem;
+  text-align: center;
+}
+
+.logo {
+  width: 30%;
+}
+
+/* The Target audience CSS ssection */
+.design > h2,
+.summary-box h2,
+#target-audience h2 {
+  text-align: center;
+  margin-block-end: 1rem;
+  border-bottom: thick solid var(--color-nav-foot);
+}
+
+#target-audience > p:not(:last-of-type) {
+  margin-block-end: 1rem;
+}
+
+/* The Design page CSS section */
+.grid-box {
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  text-align: center;
+}
+.design > p {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-block-end: 1.5rem;
+}
+
+.design > p span a,
+#target-audience span {
+  color: var(--color-secondary);
+}
+
+section {
+  background-color: var(--color-nav-foot);
+  padding-block: 1rem;
+}
+
+.grid-box :nth-child(1) :where(p:last-of-type, h1) {
+  background-color: var(--color-primary);
+  color: white;
+  border-block: thin solid white;
+}
+
+.grid-box :nth-child(2) :where(p:last-of-type, h2) {
+  background-color: var(--color-secondary);
+  border-block: thin solid white;
+}
+
+.grid-box :nth-child(3) :where(p:last-of-type, h3) {
+  border-block: thin solid black;
+}
+
+.grid-box :nth-child(1),
+:nth-child(4),
+:nth-child(5),
+:nth-child(6) {
+  font-family: var(--heading-font);
+}
+
+.grid-box :nth-child(2) {
+  font-family: var(--nav-button-font);
+}
+
+footer {
+  background-color: var(--color-nav-foot);
+  padding: 1rem;
+  text-align: center;
+  margin-block-start: 3rem;
+}

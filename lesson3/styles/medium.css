@@ -1,0 +1,40 @@
+@media only screen and (min-width: 37.5em) {
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-size: 1.7rem;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .nav-links:link,
+  .nav-links:visited {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  .nav-links:is(:hover) {
+    background-color: transparent;
+    color: var(--color-secondary);
+  }
+
+  .summary-box,
+  #target-audience {
+    width: 60ch;
+    margin: 0 auto;
+  }
+
+  .grid-box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-box :nth-child(7) {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+  }
+}
