@@ -1,7 +1,7 @@
 "use strict";
 
 const date = new Date();
-const dateUpdate = document.querySelector(".date");
+const dateUpdate = document.querySelector("#date");
 
 dateUpdate.textContent = `${
   date.getMonth() + 1
