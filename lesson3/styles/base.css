@@ -72,7 +72,7 @@ nav {
 }
 
 .title-box,
-.title-box > h2 {
+.title-box > h1 {
   margin-block-end: 2rem;
   text-align: center;
 }
@@ -82,9 +82,9 @@ nav {
 }
 
 /* The Target audience CSS ssection */
-.design > h2,
+.design > h1,
 .summary-box h2,
-#target-audience h2 {
+#target-audience h1 {
   text-align: center;
   margin-block-end: 1rem;
   border-bottom: thick solid var(--color-nav-foot);
@@ -113,6 +113,18 @@ nav {
 section {
   background-color: var(--color-nav-foot);
   padding-block: 1rem;
+}
+
+ol {
+  padding-inline-start: 4rem;
+}
+
+::marker {
+  color: var(--color-secondary);
+}
+
+li {
+  padding-inline-start: 5px;
 }
 
 .grid-box :nth-child(1) :where(p:last-of-type, h1) {

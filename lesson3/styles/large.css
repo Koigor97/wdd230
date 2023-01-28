@@ -23,6 +23,10 @@
     grid-column: 2 / 3;
     grid-row: 4 / 5;
   }
+
+  header, footer {
+    box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, 0.298);;
+  }
 }
 
 @media only screen and (min-width: 97.5em) {

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lynnwood Business Chamber | Your one stop Chamber of Commerce online resource. </title>
+    <meta name="description"
+        content="The Lynnwood Business Chamber, is a one stop Chamber of Commerce online resource platform, that not only carters for the Lynnwood community, but spreads nation wide and internationally. Lynnwood Business Chamber mission, is to promote economic development, support the growth of local businesses, and advocate for pro-business policies in our community. We provide a wide range of resources, including networking events, educational opportunities, and support for small businesses. ">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Lato&family=Nunito+Sans&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-box">
+            <img class="logo" src="images/logo.png" width="454" alt="logo image">
+        </div>
+
+        <!-- I created this button because I want to add some animation to the hamburger menu when clicked. That can't be achieve with a image. I created the button using svg instead the of ::before and ::after psuedo-element. I prefer it this way -->
+        <button class="mobile-nav" aria-controls="primary-navigation" aria-expanded="false">
+            <svg class="hamburger" viewBox="0 0 100 100" width="40">
+                <rect class="top ham-bar" width="80" height="10" x="10" y="30" rx="5">
+                </rect>
+
+                <rect class="middle ham-bar" width="80" height="10" x="10" y="50" rx="5">
+                </rect>
+
+                <rect class="bottom ham-bar" width="80" height="10" x="10" y="70" rx="5">
+                </rect>
+            </svg>
+        </button>
+
+        <!-- To make my navigation links to have an icon to it, I used svg sprite icons I downloaded to achieve this-->
+        <nav>
+            <ul id="primary-navigation" class="primary-navigation" data-visible="false">
+                <li class="active">
+                    <a href="#">
+                        <svg class="navi-icon">
+                            <use xlink:href="images/sprite.svg#icon-paper-plane"></use>
+                        </svg>
+                        <span>Discover</span></a>
+                </li>
+                <li>
+                    <a href="/">
+                        <svg class="navi-icon">
+                            <use xlink:href="images/sprite.svg#icon-archive"></use>
+                        </svg>
+                        <span>Directory</span></a>
+                </li>
+                <li>
+                    <a href="/">
+                        <svg class="navi-icon">
+                            <use xlink:href="images/sprite.svg#icon-add-user"></use>
+                        </svg>
+                        <span>Join</span></a>
+                </li>
+                <li>
+                    <a href="/">
+                        <svg class="navi-icon">
+                            <use xlink:href="images/sprite.svg#icon-old-phone"></use>
+                        </svg>
+                        <span>Contact</span></a>
+                </li>
+
+            </ul>
+        </nav>
+        <div class="social">
+            <svg class="social-icon">
+                <use xlink:href="images/sprite.svg#icon-facebook-with-circle"></use>
+            </svg>
+            <svg class="social-icon">
+                <use xlink:href="images/sprite.svg#icon-linkedin-with-circle"></use>
+            </svg>
+        </div>
+    </header>
+    <div id="top-date">
+        <p>Friday, 26 January 2023</p>
+    </div>
+    <!-- I used the h1 and h3 tag as placeholder element for the different sections. The reason behind this, is for semantic html. -->
+    <main class="grid-main">
+        <section class="hero">
+            <h1>Hero with site name and call to action</h1>
+        </section>
+        <section class="event">
+            <h3>Event</h3>
+        </section>
+        <section class="spotlight">
+            <div class="spotlight-box">
+                <h3>Spotlight 1</h3>
+            </div>
+            <div class="spotlight-box">
+                <h3>Spotlight 2</h3>
+            </div>
+            <div class="spotlight-box">
+                <h3>Spotlight 3</h3>
+            </div>
+        </section>
+        <section class="weather">
+            <h3>Weather</h3>
+        </section>
+        <section class="join">
+            <h3>Join</h3>
+        </section>
+        <section class="new-release">
+            <h3>New Release</h3>
+        </section>
+    </main>
+
+    <!-- In the footer, there are nested divs, and the parent div (footer-flex-box) get the display flex to it. -->
+    <footer>
+        <div class="footer-flex-box">
+            <div class="footer-logo-box">
+                <img src="images/logo.png" alt="Lynnwood Business Chamber Logo" class="footer-logo">
+            </div>
+            <div class="address-box">
+                <p>253 Main Road, Lynnwood</p>
+                <p>Pretoria, South Africa 0081</p>
+            </div>
+            <div class="contact-box">
+                <p>info@lynnwoodbusinesschamber.co.za</p>
+                <p>+(27) 82 333-2023</p>
+                <p>📍 Location Map</p>
+            </div>
+        </div>
+        &copy;2023 Lynnwood Business Chamber | Samuel F. Turay | WDD 230 Project | Last Modification: <span id="date"></span>
+    </footer>
+    <script src="scripts/chamber.js"></script>
+</body>
+
+</html>
