@@ -24,7 +24,7 @@
 <body>
     <header>
         <div class="logo-box">
-            <img class="logo" src="images/logo.png" width="454" alt="logo image">
+            <a href="index.html"><img class="logo" src="images/logo.png" width="454" alt="logo image"></a>
         </div>
 
         <!-- I created this button because I want to add some animation to the hamburger menu when clicked. That can't be achieve with a image. I created the button using svg instead the of ::before and ::after psuedo-element. I prefer it this way -->
@@ -41,9 +41,8 @@
             </svg>
         </button>
 
-        <!-- To make my navigation links to have an icon to it, I used svg sprite icons I downloaded to achieve this-->
-        <nav>
-            <ul id="primary-navigation" class="primary-navigation" data-visible="false">
+        <nav id="primary-navigation" class="primary-navigation" data-visible="false">
+            <ul  >
                 <li class="active">
                     <a href="#">
                         <svg class="navi-icon">
@@ -52,21 +51,21 @@
                         <span>Discover</span></a>
                 </li>
                 <li>
-                    <a href="/">
+                    <a href="#">
                         <svg class="navi-icon">
                             <use xlink:href="images/sprite.svg#icon-archive"></use>
                         </svg>
                         <span>Directory</span></a>
                 </li>
                 <li>
-                    <a href="/">
+                    <a href="#">
                         <svg class="navi-icon">
                             <use xlink:href="images/sprite.svg#icon-add-user"></use>
                         </svg>
                         <span>Join</span></a>
                 </li>
                 <li>
-                    <a href="/">
+                    <a href="#">
                         <svg class="navi-icon">
                             <use xlink:href="images/sprite.svg#icon-old-phone"></use>
                         </svg>
@@ -83,9 +82,12 @@
                 <use xlink:href="images/sprite.svg#icon-linkedin-with-circle"></use>
             </svg>
         </div>
+
     </header>
-    <div id="top-date">
-        <p>Friday, 26 January 2023</p>
+
+
+    <div class="top-date">
+        <p id="top-date"></p>
     </div>
     <!-- I used the h1 and h3 tag as placeholder element for the different sections. The reason behind this, is for semantic html. -->
     <main class="grid-main">
@@ -93,27 +95,27 @@
             <h1>Hero with site name and call to action</h1>
         </section>
         <section class="event">
-            <h3>Event</h3>
+            <h2>Event</h2>
         </section>
         <section class="spotlight">
             <div class="spotlight-box">
-                <h3>Spotlight 1</h3>
+                <h2>Spotlight 1</h2>
             </div>
             <div class="spotlight-box">
-                <h3>Spotlight 2</h3>
+                <h2>Spotlight 2</h2>
             </div>
             <div class="spotlight-box">
-                <h3>Spotlight 3</h3>
+                <h2>Spotlight 3</h2>
             </div>
         </section>
         <section class="weather">
-            <h3>Weather</h3>
+            <h2>Weather</h2>
         </section>
         <section class="join">
-            <h3>Join</h3>
+            <h2>Join</h2>
         </section>
         <section class="new-release">
-            <h3>New Release</h3>
+            <h2>New Release</h2>
         </section>
     </main>
 
@@ -133,7 +135,8 @@
                 <p>📍 Location Map</p>
             </div>
         </div>
-        &copy;2023 Lynnwood Business Chamber | Samuel F. Turay | WDD 230 Project | Last Modification: <span id="date"></span>
+        <p>&copy;2023 Lynnwood Business Chamber | Samuel F. Turay | WDD 230 Project | Last Modification: <span
+            id="date"></span></p>
     </footer>
     <script src="scripts/chamber.js"></script>
 </body>

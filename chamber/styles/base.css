@@ -1,35 +1,41 @@
 *,
 ::before,
 ::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 :root {
-  --heading-font: "DM Sans", sans-serif;
-  --paragraph-font: "Lato", sans-serif;
-  --nav-button-font: "Nunito Sans", sans-serif;
+    --heading-font: "DM Sans", sans-serif;
+    --paragraph-font: "Lato", sans-serif;
+    --nav-button-font: "Nunito Sans", sans-serif;
 
-  --color-primary: #121ca5;
-  --color-secondary: #ffbe37;
-  --color-nav-foot: #edeefd;
+    --color-primary: #121ca5;
+    --color-secondary: #ffc038;
+    --color-nav-foot: #eeeffc;
 
-  --primary-text1: #212427;
-  --primary-text2: #fff;
-  --secondary-text: #313131;
+    --primary-text1: #212427;
+    --primary-text2: #fff;
+    --secondary-text: #313131;
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 50%;
     box-sizing: border-box;
 }
 
 body {
-    color: var(--secondary-text);
-    font-size: 1.7rem;
+    color: #fff;
+    font-size: 1.5rem;
     font-family: var(--paragraph-font);
     line-height: 1.5;
+    overflow-x: hidden;
+}
+
+h1,
+h2 {
+    margin: .5rem 2vw;
 }
 
 /* Styling the Navigation, logo, media links in the header */
@@ -44,86 +50,35 @@ header {
     padding-inline: 3.5rem;
     padding-block: 1rem;
     flex: 0 0 100%;
-    
-}
-
-ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    flex: 0 0 100%;
-    margin-inline-start: -5rem;
-    
-}
-
-li a:link, 
-li a:visited {
-    color: var(--primary-text1);
-    text-transform: uppercase;
-    text-decoration: none;
-    padding-block: 2rem;
-    padding-inline: 1rem;
     position: relative;
-    
-    display: flex;
-    align-items: center;
-}
-
-li a::after {
-    content: "";
-    opacity: 0;
-    transition: opacity 0.2s;
-    height: 3px;
-    width: 100%;
-    background-color: var(--color-secondary);
-    position: absolute;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-}
-
-li a:hover::after {
-    opacity: 1;
-}
-
-.logo {
-    width: 40%;
-    
-}
-
-.social-icon {
-    width: 4rem;
-    height: 4rem;
-    
-}
-
-.navi-icon {
-    width: 1.6rem;
-    height: 1.6rem;
-    margin-inline-end: .5rem;
-    
+    /* overflow: hidden; */
 }
 
 .mobile-nav {
-    background: transparent;
-    border: 1px solid #000;
+    background: var(--color-primary);
+    border: 1px solid var(--color-secondary);
     border-radius: 5px;
     cursor: pointer;
+    margin: .2rem 2vw;
+    order: 1;
+    z-index: 99999;
 }
 
 .mobile-nav .ham-bar {
     transition:
-    y 200ms ease-in 200ms,
-    rotate 200ms ease-in,
-    opacity 0ms 200ms;
+        y 200ms ease-in 200ms,
+        rotate 200ms ease-in,
+        opacity 0ms 200ms;
     transform-origin: center;
+    fill: var(--color-secondary);
 }
 
 .mobile-nav[aria-expanded='true'] .ham-bar {
     transition:
-    y 200ms ease-in,
-    rotate 200ms ease-in 200ms,
-    opacity 0ms 300ms;
-    
+        y 200ms ease-in,
+        rotate 200ms ease-in 200ms,
+        opacity 0ms 300ms;
+
 }
 
 .mobile-nav[aria-expanded='true'] :is(.top, .bottom) {
@@ -139,16 +94,97 @@ li a:hover::after {
 }
 
 .mobile-nav[aria-expanded='true'] .middle {
-    opacity: 0;;
+    opacity: 0;
 }
 
-.mobile-nav {
-    display: none;
+.primary-navigation {
+    position: absolute;
+    height: 50vh;
+    inset: 70px 0 0 0;
+    background: hsl(41 100% 61% / 0.5);
+    backdrop-filter: blur(2rem);
+    transform: translateX(100%);
+    transition: transform 300ms ease-out;
+
 }
+
+.primary-navigation ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    list-style: none;
+    padding-inline: 2rem;
+    flex: 0 0 100%;
+    padding-block: min(30vh, 10rem);
+    background: hsl(0, 0%, 100% / 0.1);
+    gap: 2.5rem;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 1;
+
+}
+
+
+.primary-navigation :where(a:link, :visited) {
+    color: var(--primary-text1);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+    letter-spacing: 2px;
+
+    display: flex;
+    align-items: center;
+}
+
+.primary-navigation a:hover:where(:link, :visited) {
+    background: var(--color-secondary);
+    backdrop-filter: blur(5rem);
+}
+
+.primary-navigation li.active a {
+    background-color: hsl(41 100% 61% / 0.7);
+}
+
+.primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+}
+
+
+.logo {
+    width: 15rem;
+
+}
+
+.social-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-inline-start: 1rem;
+}
+
+.social {
+    margin-inline-end: -15rem;
+}
+
+.navi-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-inline-end: .5rem;
+    fill: var(--color-primary);
+
+}
+
 
 .top-date {
+    color: var(--primary-text1);
     background-color: var(--color-secondary);
+    font-size: 1.7rem;
+    text-align: center;
+    padding-block: 1rem;
+    word-spacing: 2px;
+    font-weight: 600;
 }
+
 /* The layout of the body CSS section */
 [class*="grid-"] {
     display: grid;
@@ -157,4 +193,80 @@ li a:hover::after {
 
 .grid-main {
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    grid-auto-rows: 300px;
+    margin-block: 2.5rem;
+    margin-inline: 2.5rem;
+}
+
+.grid-main>* {
+    border: 2px solid var(--color-nav-foot);
+    background-color: var(--color-primary);
+}
+
+.event {
+    grid-row: 2 / 3;
+}
+
+.spotlight {
+    grid-row: 5 / 7;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.spotlight > :last-child{
+        display: none;
+    }
+
+.spotlight-box {
+    height: 100%;
+    margin-inline: 2rem;
+    margin-block: 2rem;
+    border: 2px solid;
+}
+
+.weather {
+    grid-row: 3 / 4;
+}
+
+.join {
+    display: none;
+}
+
+.new-release {
+    grid-row: 4 / 5;
+}
+
+.footer-flex-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    margin-block-end: 1rem;
+}
+
+.footer-logo {
+    width: 20rem;
+
+}
+
+footer {
+    color: var(--secondary-text);
+    background-color: var(--color-nav-foot);
+    padding-block: 2rem;
+    padding-inline: 1.5rem;
+    margin-block-start: 5rem;
+
+}
+
+footer>p {
+    text-align: center;
+    border-top: 2px solid var(--color-secondary);
+    padding-block-start: 1rem;
+    padding-inline: 2rem;
+    word-spacing: 2px;
+    font-size: 1.5rem;
 }
