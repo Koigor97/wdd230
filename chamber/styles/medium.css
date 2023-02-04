@@ -17,6 +17,10 @@
         grid-row: 1 / 2;
     }
 
+    .hero h1 {
+        top: 5rem;
+    }
+    
     .event {
         grid-column: 1 / 3;
         grid-row: 5 / 6;

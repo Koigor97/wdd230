@@ -29,7 +29,14 @@ try {
         day: "numeric",
         year: "numeric"
     };
-    topDate.textContent = `${date.toLocaleDateString("en-SA", options)}`;
+    topDate.textContent = `${date.toLocaleDateString("en-UK", options)}`;
 } catch (e) {
     console.log("Error with code or your browser does not support Locale");
+}
+
+const show = document.querySelector(".pop");
+let dayOfWeek = date.toLocaleDateString('default', {weekday: "long"});
+    
+if (dayOfWeek === "Monday" || dayOfWeek === "Tuesday") {
+    show.style.display = "block";
 }
